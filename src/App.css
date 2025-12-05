@@ -3,3 +3,16 @@
   padding: 0;
   text-align: center;
 }
+
+@keyframes scrollTicker {
+  0% {
+    transform: translateX(0); /* começa no início */
+  }
+  100% {
+    transform: translateX(-50%); /* move apenas metade (porque duplicamos o conteúdo) */
+  }
+}
+
+.animate-scrollTicker {
+  animation: scrollTicker 20s linear infinite;
+}
