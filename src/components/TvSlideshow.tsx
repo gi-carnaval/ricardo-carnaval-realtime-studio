@@ -3,7 +3,7 @@ import { usePhotoPolling } from "../hook/usePhotoPolling";
 import { getQrValue, getSafeIndex } from "../utils";
 import { NotificationBadge } from "./NotificationBadge";
 import { QRCodePanel } from "./QrCodePanel";
-import { SlideshowImage } from "./SlideShowImage";
+import { SlideshowImage } from "./SlideshowImage";
 
 type Props = {
   apiUrl?: string;
