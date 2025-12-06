@@ -1,13 +1,6 @@
 // src/hooks/usePhotoPolling.ts
 import { useEffect, useRef, useState } from "react";
-
-type Photo = {
-  id: string;
-  name: string;
-  link: string;
-  hash: string;
-  timestamp: string;
-};
+import type { Photo } from "../types";
 
 export function usePhotoPolling(opts?: {
   url?: string;
@@ -15,8 +8,6 @@ export function usePhotoPolling(opts?: {
 }) {
   const url = opts?.url || (import.meta.env.VITE_TV_API_URL+'?eventId='+import.meta.env.VITE_EVENT_ID || "http://localhost:4000/api/photos");
   const intervalMs = opts?.intervalMs ?? 12000;
-
-  console.log(url)
 
   const [photos, setPhotos] = useState<Photo[]>([]);
   const [recentHash, setRecentHash] = useState<string | null>(null);
